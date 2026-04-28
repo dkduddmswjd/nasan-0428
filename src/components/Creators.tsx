@@ -1,6 +1,12 @@
 import { motion } from "motion/react";
 import { Youtube, Instagram, ArrowUpRight } from "lucide-react";
 
+// Import images to ensure Vite handles them correctly in production
+import boriImg from "../assets/images/bori.png";
+import supercollaImg from "../assets/images/supercolla.png";
+import janggunImg from "../assets/images/janggun.png";
+import kimsomImg from "../assets/images/kimsom.png";
+
 const CREATORS = [
   {
     id: 1,
@@ -10,7 +16,7 @@ const CREATORS = [
     instagram: "https://www.instagram.com/kiyomi_bori/",
     followers: "420K",
     traits: "일상 속 자연스러운 반려견 콘텐츠",
-    image: "/src/assets/images/bori.png",
+    image: boriImg,
     style: "감성 브이로그, 힐링 콘텐츠"
   },
   {
@@ -21,7 +27,7 @@ const CREATORS = [
     instagram: "https://www.instagram.com/supercolaa/",
     followers: "230K",
     traits: "대형견 전문 야외 활동 및 리뷰",
-    image: "/src/assets/images/supercolla.png",
+    image: supercollaImg,
     style: "정보 공유형 리뷰, 활기찬 일상"
   },
   {
@@ -32,7 +38,7 @@ const CREATORS = [
     instagram: "https://www.instagram.com/maltese_janggun/",
     followers: "120K",
     traits: "다묘 가정의 집사 공감 영상",
-    image: "/src/assets/images/janggun.png",
+    image: janggunImg,
     style: "재미 요소 가미, 집사 공감"
   },
   {
@@ -43,7 +49,7 @@ const CREATORS = [
     instagram: "https://www.instagram.com/kim_som222/",
     followers: "150K",
     traits: "반려견 패션 및 리빙 아이템 리더",
-    image: "/src/assets/images/kimsom.png",
+    image: kimsomImg,
     style: "비주얼 중심, 트렌디 디자인"
   }
 ];
