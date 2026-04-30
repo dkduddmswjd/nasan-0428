@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
 import { Youtube, Instagram, ArrowUpRight } from "lucide-react";
 
-// Use new URL() for assets to ensure correct path resolution in production
-const boriImg = new URL('../assets/images/bori.png', import.meta.url).href;
-const supercollaImg = new URL('../assets/images/supercolla.png', import.meta.url).href;
-const janggunImg = new URL('../assets/images/janggun.png', import.meta.url).href;
-const kimsomImg = new URL('../assets/images/kimsom.png', import.meta.url).href;
+// Import images directly for production reliability
+import boriImg from '../assets/images/bori.png';
+import supercollaImg from '../assets/images/supercolla.png';
+import janggunImg from '../assets/images/janggun.png';
+import kimsomImg from '../assets/images/kimsom.png';
 
 const CREATORS = [
   {
