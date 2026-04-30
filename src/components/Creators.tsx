@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
 import { Youtube, Instagram, ArrowUpRight } from "lucide-react";
 
-// Import images to ensure Vite handles them correctly in production
-import boriImg from "../assets/images/bori.png";
-import supercollaImg from "../assets/images/supercolla.png";
-import janggunImg from "../assets/images/janggun.png";
-import kimsomImg from "../assets/images/kimsom.png";
+// Use new URL() for assets to ensure correct path resolution in production
+const boriImg = new URL('../assets/images/bori.png', import.meta.url).href;
+const supercollaImg = new URL('../assets/images/supercolla.png', import.meta.url).href;
+const janggunImg = new URL('../assets/images/janggun.png', import.meta.url).href;
+const kimsomImg = new URL('../assets/images/kimsom.png', import.meta.url).href;
 
 const CREATORS = [
   {
@@ -73,7 +73,12 @@ export default function CreatorList({ onContact }: { onContact: () => void }) {
             className="group"
           >
             <div className="aspect-square rounded-3xl overflow-hidden relative mb-6">
-               <img src={creator.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={creator.name} />
+               <img 
+                 src={creator.image} 
+                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                 alt={creator.name} 
+                 referrerPolicy="no-referrer"
+               />
                <div className="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-colors" />
                
                <div className="absolute top-4 right-4 flex gap-2">
@@ -118,7 +123,12 @@ export default function CreatorList({ onContact }: { onContact: () => void }) {
 
       <div className="mt-40 p-8 md:p-20 bg-dark rounded-[3rem] text-center text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 grayscale">
-            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1924&auto=format&fit=crop" className="w-full h-full object-cover" alt="Join us" />
+            <img 
+              src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1924&auto=format&fit=crop" 
+              className="w-full h-full object-cover" 
+              alt="Join us" 
+              referrerPolicy="no-referrer"
+            />
         </div>
         <div className="relative z-10 flex flex-col items-center">
           <h2 className="font-display text-lg md:text-2xl font-bold tracking-tight mb-6">나산과 함께 성장할<br className="md:hidden" /> 크리에이터를 찾습니다.</h2>
